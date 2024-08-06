@@ -10,7 +10,11 @@
   <p>
     Real Text! 
   </p>
-  
+
+  <!-- Table of Contents -->
+# :notebook_with_decorative_cover: Table of Contents
+- [FAQ](#grey_question-faq)
+
 <!-- About the Project -->
 ## :star2: About the Project
 
