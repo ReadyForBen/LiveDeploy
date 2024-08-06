@@ -5,15 +5,11 @@
 <div align="center">
 
   <img src="assets/logo.png" alt="logo" width="200" height="auto" />
-  <h1>Test</h1>
+  <h1>Live Deploy</h1>
   
   <p>
     Real Text! 
   </p>
-
-  <!-- Table of Contents -->
-# :notebook_with_decorative_cover: Table of Contents
-- [FAQ](#grey_question-faq)
 
 <!-- About the Project -->
 ## :star2: About the Project
@@ -23,6 +19,6 @@
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="https://placehold.co/600x400?text=Coming+Soon" alt="screenshot" />
 </div>
 
