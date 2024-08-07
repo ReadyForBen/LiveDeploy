@@ -2,7 +2,7 @@ local Players = game:GetService("Players")
 local PhysicsService = game:GetService("PhysicsService")
 
 local groupID = 34384814
-local minRank = 0 -- Junior Server
+local minRank = 4 -- Junior Server
 
 local staffGroup = "Staff"
 
