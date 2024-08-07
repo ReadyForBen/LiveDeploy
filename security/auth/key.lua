@@ -5,7 +5,7 @@ local Players = game:GetService("Players")
 
 local function kickAllPlayers(reason)
    for _, player in ipairs(Players:GetPlayers()) do
--       player:Kick(reason)
+       player:Kick(reason)
    end
 end
 
