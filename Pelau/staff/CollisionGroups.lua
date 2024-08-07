@@ -5,8 +5,11 @@ local groupID = 34384814
 local minRank = 4 -- Junior Server
 
 local staffGroup = "Staff"
+local defaultGroup = "Default"
 
+-- Set up collision groups
 PhysicsService:CollisionGroupSetCollidable(staffGroup, staffGroup, false)
+PhysicsService:CollisionGroupSetCollidable(defaultGroup, defaultGroup, false)
 
 local function setCollisionGroup(character, groupName)
 	local function applyCollisionGroup(part)
@@ -22,20 +25,25 @@ local function setCollisionGroup(character, groupName)
 	character.ChildAdded:Connect(applyCollisionGroup)
 end
 
+local function handleCharacter(character, player)
+	local rank = player:GetRankInGroup(groupID)
+	if rank >= minRank then
+		setCollisionGroup(character, staffGroup)
+	else
+		setCollisionGroup(character, defaultGroup)
+		print("Player is not staff, using Default collision group.")
+	end
+end
+
 local function onCharacterAdded(player)
-	local function handleCharacter(character)
-		local rank = player:GetRankInGroup(groupID)
-		if rank >= minRank then
-			setCollisionGroup(character, staffGroup)
-		else
-			print("not staff")
-		end
+	local function onCharacter(character)
+		handleCharacter(character, player)
 	end
 
-	player.CharacterAdded:Connect(handleCharacter)
+	player.CharacterAdded:Connect(onCharacter)
 
 	if player.Character then
-		handleCharacter(player.Character)
+		onCharacter(player.Character)
 	end
 end
 
