@@ -5,7 +5,7 @@ local groupID = 34384814
 local minRank = 4 -- Junior Server
 
 local staffGroup = "Staff"
-local defaultGroup = "Default"
+local defaultGroup = "Staff"
 
 -- Set up collision groups
 PhysicsService:CollisionGroupSetCollidable(staffGroup, staffGroup, false)
